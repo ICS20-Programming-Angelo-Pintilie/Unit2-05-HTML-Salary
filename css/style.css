@@ -1,0 +1,36 @@
+body {
+  background-color: #E0FFFF;
+  font-size: 10pt;
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+  color: grey;
+  line-height: 14pt;
+  padding-left: 5pt;
+  padding-right: 5pt;
+  padding-top: 5pt;
+}
+
+h1 {
+  font: 16pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 20pt;
+  color: slateblue;
+}
+
+h2 {
+  font: 14pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 18pt;
+  color: mediumseagreen;
+}
+
+h3 {
+  font: 12pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 16pt;
+  color: #8193ee;
+}
+
+p.subheader {
+  font-weight: bold;
+  color: #593d87;
+}
