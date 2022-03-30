@@ -1,16 +1,28 @@
 // Copyright (c) 2022 Angelo Pintilie All rights reserved
 //
 // Created by: Angelo Pintilie
-// Created on: Mar 2022
+// Created on: March 2022
 // This file contains the JS functions for index.html
 
-function enterClicked () {
-  // this function gets user's hours worked and hourly pay, then calculates their total pay including tax.
+"use strict"
 
-  // get hours from text field
-  let hours = document.getElementById("hours").value
-	// get hourly pay from text field and cast it to integer
-  let payEntered = parseInt(document.getElementById("pay-entered").value)
-  // display pay and tax back to user
-  document.getElementById('user-info').innerHTML = "Your pay will be " + hours + " and the government is taking " + payEntered + " ."
+// declare constants
+const TAX_BRACKET = 0.1805
+
+/**
+ * This function calculates area and perimeter of rectangle.
+ */
+function payClicked () {
+  // get user input
+  let hours = parseFloat(document.getElementById('hours').value)
+  let rate = parseFloat(document.getElementById('rate').value)
+
+  // calculate the pay and the tax
+  let total_pay = hours * rate
+  let tax = TAX_BRACKET * total_pay
+	let total_earned = total_pay - tax 
+
+  // display the results
+  document.getElementById('total-earned').innerHTML = "Your pay will be $" + total_earned.toFixed(2)
+  document.getElementById('tax').innerHTML = "The government will take $" + tax.toFixed(2)
 }
